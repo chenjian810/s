@@ -12,7 +12,7 @@ public class Bcc {
 		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/text", "root", "123456");
 		String sql="insert into emp "
 				+ "values(?,?,?,?)";
-		PreparedStatement ps=con.prepareStatement(sql);
+		PreparedStatement ps=con.prepareStatement(sql);//‘§±‡“Î÷¥––sql”Ôæ‰
 		Scanner scan=new Scanner(System.in);
 		String emp=scan.next();
 		String[] e=emp.split(",");
