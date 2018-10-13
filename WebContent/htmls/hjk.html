@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>我的第一个html网页</title>
+<!-- <style>
+	#table1{
+	
+	}
+	.table2{
+	background: blue;
+	border:1px solid #e4393c;
+	width:100px;
+	height: 200px;
+	text-align: center;
+	color:white;
+	font-weight: 800;
+	font-family: "华文行楷";
+	font-size:50px;
+	margin:0 auto;
+	}
+	a{
+	text-decoration: none;
+	}
+</style> -->
+<link rel="stylesheet" href="1.css" >
+<script type="text/javascript">
+	console.log("111");
+	function aaa(){
+		var a=document.getElementById("td1");
+		if(a.innerText=="小明qqqq"){
+			alert(a.innerText);
+		}
+		else{
+			alert("gfdxz");
+		}
+		
+	}
+	function bbb(){
+		alert("小刚");
+	}
+</script>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	console.log($("#td2").text());
+})	
+function asd(){
+	if(confirm('是否要删除')){
+		console.log("删除"+$("#td3").text());
+		$("#td3").remove();
+	}
+	else{
+		
+	}
+}
+function add(){
+	//alert("这是一个添加按钮");
+	$("#table1").append("<tr><td>新增1</td><td>新增2</td></tr>")
+}
+function del(){
+	$("#table1 tr:last").remove();
+}
+</script>
+</head>
+<body>
+	<h1>qwq</h1>
+	<h2>wqw</h2>
+	<h3>qw</h3>
+	<h4>wqwq</h4>
+	<h5>wqwq</h5>
+	<table  id="table1" class="table2">
+		<tr><td id="td1" onclick="aaa()">小明qqqq</td><td id="td3" onclick="asd()">小红</td></tr>
+		<tr><td ondblclick="bbb()">小刚</td><td id="td2">小李</td></tr>
+	</table>
+	<p class="aaa">账号：<input type="text"></p>
+	<p>密码：<input type="password"></p>
+	<p>性别：男：<input type="radio" name="sex">女：<input type="radio" name="sex"></p>
+	<p>兴趣爱好：<input type="checkbox" >唱歌<input type="checkbox">跳舞<input type="checkbox"> 弹钢琴</p>
+	<a href="http://www.baidu.com">百度链接</a>
+	<a href="b.html">b</a>
+	<select>
+		<option>--请选择城市--</option>
+		<option>北京</option>
+		<option>上海</option>
+		<option>广州</option>
+		<option>深圳</option>
+	</select>
+	<button onclick="add()">添加</button>
+	<button onclick="del()">删除</button>
+</body>
+</html>

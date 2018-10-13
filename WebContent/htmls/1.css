@@ -1,0 +1,25 @@
+.aaa{
+	color:blue;
+}
+.aaa:hover{
+	color:red;
+	font-size: 20px;
+}
+#table1{
+	
+	}
+	.table2{
+	background: blue;
+	border:1px solid #e4393c;
+	width:100px;
+	height: 200px;
+	text-align: center;
+	color:white;
+	font-weight: 800;
+	font-family: "»ªÎÄÐÐ¿¬";
+	font-size:50px;
+	margin:0 auto;
+	}
+	a{
+	text-decoration: none;
+	}
