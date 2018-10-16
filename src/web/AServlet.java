@@ -34,6 +34,7 @@ public class AServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		request.getRequestDispatcher("1.jsp").forward(request, response);
+
 	}
 
 }
