@@ -12,16 +12,23 @@ import java.io.PrintWriter;
  */
 public class Desz {
 	public static void main(String[] args) throws IOException {
-		File f=new File("a.txt");
-		f.createNewFile();
-		FileOutputStream out=new FileOutputStream("a.txt");
+		for(int i=0;i<100;i++) {
+			File f=new File("D:\\a\\新建文件"+i+".docx");
+			f.createNewFile();
+			//f.delete();
+		}
+		
+		//f.mkdir();
+		//f.delete();
+		//f.createNewFile();
+		/*FileOutputStream out=new FileOutputStream("a.txt");
 		PrintWriter pw=new PrintWriter(out);
 		pw.println("xiaoming");
 		pw.println("xiaoming1");
 		pw.println("xiaoming2");
 		pw.println("xiaoming3");
 		pw.println("xiaoming4");
-		pw.flush();
-		System.out.println(f.getName());
+		pw.flush();*/
+		//System.out.println(f.getName());
 	}
 }

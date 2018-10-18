@@ -14,10 +14,10 @@ import web.Emp;
 
 public class EmpDAO {
 	public List<Emp> findAll() throws SQLException {
-		Connection conn=DBUtils.getConn();
+		Connection conn=DBUtils.getConn();//连接数据库
 		String sql="select * from emp";
 		PreparedStatement ps=conn.prepareStatement(sql);
-		ResultSet rs=ps.executeQuery();
+		ResultSet rs=ps.executeQuery();//结果集
 		List<Emp> emps=new ArrayList<Emp>();
 		//=new ArrayList<Emp>()
 		while(rs.next()) {
@@ -34,7 +34,7 @@ public class EmpDAO {
 		Connection conn=DBUtils.getConn();
 		String sql="insert into emp "
 				+ "values(?,?,?,?)";
-		PreparedStatement ps=conn.prepareStatement(sql);
+		PreparedStatement ps=conn.prepareStatement(sql);//预编译sql
 		ps.setInt(1,e.getId());
 		ps.setString(2,e.getName());
 		ps.setInt(3, e.getAge());
@@ -80,6 +80,8 @@ public class EmpDAO {
 		e.setName("dygasubdjknlm");
 		e.setSalary(10);
 		dao.updateEmp(e);*/
+	/*	Emp e=new Emp(12,"小小白",23,6770);
+		dao.insertEmp(e);*/
 		System.out.println(dao.findAll());
 		dao.findAll().forEach(System.out::println);
 		//System.out.println(dao.findAll());
