@@ -8,7 +8,11 @@ import java.util.Properties;
 
 import org.apache.commons.dbcp.BasicDataSource;
 
-
+/**
+ * 数据库连接工具类
+ * @author 陈建
+ *
+ */
 public class DBUtil2 {
 	public static BasicDataSource bs;
 	static {
@@ -34,9 +38,19 @@ public class DBUtil2 {
 		bs.setMaxActive(6);//最大连接数
 */	
 	}
+	/**
+	 * 连接数据库
+	 * @return Connection 接口
+	 * @throws SQLException sql异常
+	 */
 	public static Connection getConn() throws SQLException  {
 		return bs.getConnection();
 	}
+	/**
+	 * 关闭数据库连接
+	 * @param conn Connection接口
+	 * @throws SQLException sql异常
+	 */
 	public static void closeConn(Connection conn) throws SQLException {
 		if(conn!=null) {
 			conn.close();

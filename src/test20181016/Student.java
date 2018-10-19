@@ -5,19 +5,49 @@ package test20181016;
  *
  */
 public class Student {
+	/**
+	 * 编号
+	 */
 	private int id;
+	/**
+	 * 班级
+	 */
 	private String classname;
+	/**
+	 * 姓名
+	 */
 	private String name;
+	/**
+	 * 学号
+	 */
 	private String xuehao;
+	/**
+	 * 年龄
+	 */
 	private int age;
+	/**
+	 * 成绩
+	 */
 	private double score;
 	public static void main(String[] args) {
 		Student Std=new Student(1,"一班","小王","c1",23,70.1);
 		System.out.println(Std);
 	}
+	/**
+	 * 构造器
+	 */
 	public Student() {
 		
 	}
+	/**
+	 * 带参构造器
+	 * @param id 编号
+	 * @param classname 班级
+	 * @param name 姓名
+	 * @param xuehao 学号
+	 * @param age 年龄
+	 * @param score 成绩
+	 */
 	public Student(int id,String classname,String name,String xuehao,int age,double score) {
 		this.id=id;
 		this.classname=classname;

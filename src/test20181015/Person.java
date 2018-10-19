@@ -1,9 +1,25 @@
 package test20181015;
-
+/**
+ * 人    抽象类
+ * @author 陈建
+ *
+ */
 public	abstract class Person {
+	/**
+	 * 名字
+	 */
 	public String name;
+	/**
+	 * 年龄
+	 */
 	public int age;
+	/**
+	 * 薪水
+	 */
 	public double salary;
+	/**
+	 * 说 方法
+	 */
 	public abstract void say();
 	public static void main(String[] args) {
 		Person p=new Man();
