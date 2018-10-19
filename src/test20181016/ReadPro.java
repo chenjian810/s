@@ -4,7 +4,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
+/**
+ * 读取.properties文件测试类
+ * @author Administrator
+ *
+ */
 public class ReadPro {
 	public static void main(String[] args) throws IOException {
 		Properties prop=new Properties();

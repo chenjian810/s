@@ -9,10 +9,20 @@ import java.util.List;
 
 import javax.swing.plaf.synth.SynthSpinnerUI;
 
-import utils.DBUtils;
-import web.Emp;
-
+import test20181015.utils.DBUtils;
+import test20181015.web.Emp;
+/**
+ * jdbc的封装
+ * emp表的增删查改
+ * @author 陈建
+ *
+ */
 public class EmpDAO {
+	/**
+	 * 查找所有的emp记录
+	 * @return emp集合
+	 * @throws SQLException
+	 */
 	public List<Emp> findAll() throws SQLException {
 		Connection conn=DBUtils.getConn();//连接数据库
 		String sql="select * from emp";
@@ -30,6 +40,11 @@ public class EmpDAO {
 		}
 		return emps;
 	}
+	/**
+	 * 插入一条emp记录
+	 * @param e emp对象
+	 * @throws SQLException sql异常
+	 */
 	public void insertEmp(Emp e) throws SQLException {
 		Connection conn=DBUtils.getConn();
 		String sql="insert into emp "
@@ -41,6 +56,11 @@ public class EmpDAO {
 		ps.setDouble(4, e.getSalary());
 		ps.execute();
 	}
+	/**
+	 * 更新一条emp记录
+	 * @param a emp对象
+	 * @throws SQLException sql异常
+	 */
 	public void updateEmp(Emp a) throws SQLException {
 		Connection conn=DBUtils.getConn();
 		String sql="update emp "
@@ -53,7 +73,11 @@ public class EmpDAO {
 		ps.setInt(4, a.getId());
 		ps.execute();
 	}
-	
+	/**
+	 * 删除一条emp记录
+	 * @param id emp的id
+	 * @throws SQLException sql异常
+	 */
 	public void del(int id) throws SQLException {
 		Connection conn=DBUtils.getConn();
 		String sql="delete from emp "

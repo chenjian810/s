@@ -1,5 +1,10 @@
 package test20181015;
-
+/**
+ * 女人类 
+ * 继承人抽象类，同时实现BC接口
+ * @author 陈建
+ *
+ */
 public class WoMan extends Person implements B,C{
 
 	@Override
