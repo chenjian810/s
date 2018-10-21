@@ -28,7 +28,7 @@ public class StudentDAO {
 		ps.setString(3, stu.getName());
 		ps.setString(4, stu.getXuehao());
 		ps.setInt(5, stu.getAge());
-		ps.setDouble(6,stu.getScore() );
+		ps.setDouble(6,stu.getScore());
 		ps.execute();
 		//System.out.println("egh");
 	}
