@@ -13,7 +13,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="E:/mavenjars/repo/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar"/>
 	<classpathentry kind="lib" path="E:/mavenjars/repo/commons-dbcp/commons-dbcp/1.4/commons-dbcp-1.4.jar"/>
 	<classpathentry kind="lib" path="E:/mavenjars/repo/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar"/>
 	<classpathentry kind="output" path="build/classes"/>

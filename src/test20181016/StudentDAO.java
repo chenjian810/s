@@ -71,7 +71,7 @@ public class StudentDAO {
 	 * @return 学生信息集合
 	 * @throws SQLException sql异常
 	 */
-	public List<Student> findAll() throws SQLException{
+	public List<Student> findAll() throws SQLException {
 		Connection conn=DBUtil2.getConn();
 		String sql="select * from Student";
 		PreparedStatement ps=conn.prepareStatement(sql);

@@ -1,4 +1,4 @@
-package test20181020;
+package test20181022;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,7 +9,7 @@ import java.util.Properties;
 import org.apache.commons.dbcp.BasicDataSource;
 
 
-public class DBUtils1 {
+public class DBUtils2 {
 	public static BasicDataSource bs;
 	static {
 		System.out.println("正在连接数据库");
