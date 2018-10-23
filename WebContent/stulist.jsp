@@ -26,11 +26,27 @@ text-align: center;
 	border:0px; 
 	}
 </style>
+<script type="text/javascript"> 
+function load(id){
+	console.log(id);
+	location.href="/s/updstu?id="+id;
+}
+function del(id){
+	if(confirm("您确定要删除编号为"+id+"的学生吗？")){
+		console.log(id);
+		location.href="/s/delstu?id="+id;
+	}
+	
+}
+function add(){
+	location.href="/s/add.jsp";
+}
+</script>
 </head>
 <body>
 	<%-- <%String s=(String)request.getAttribute("111"); %> --%>
 	<h1>${aaa}你好</h1>
-	<h2>学生列表</h2>
+	<h2>学生列表&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="add()"> 添加</button></h2>
 	<table cellspacing="0" cellpadding="0"> 
 		<tr>
 			<td>编号</td>
@@ -49,7 +65,7 @@ text-align: center;
 		<td>${s.xuehao }</td>
 		<td>${s.age}</td>
 		<td>${s.score }</td>
-			<td colspan="2"><button>修改</button>&nbsp;<button>删除</button></td>
+			<td colspan="2"><button onclick="load(${s.id})">修改</button>&nbsp;<button onclick="del(${s.id})">删除</button></td>
 			</tr>
 		</c:forEach>
 	</table>

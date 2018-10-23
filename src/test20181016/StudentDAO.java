@@ -38,13 +38,12 @@ public class StudentDAO {
 	 * @param classname 学生班级
 	 * @throws SQLException sql异常
 	 */
-	public void del(String name,String classname) throws SQLException {
+	public void del(int id) throws SQLException {
 		Connection conn=DBUtil2.getConn();
 		String sql="delete from Student "
-				+ "where name=? and classname=?";
+				+ "where id=? ";
 		PreparedStatement ps=conn.prepareStatement(sql);
-		ps.setString(1, name);
-		ps.setString(2, classname);
+		ps.setInt(1, id);
 		ps.execute();
 	}
 	/**
@@ -88,6 +87,25 @@ public class StudentDAO {
 			stu.add(s);
 		}
 		return stu;
+	}
+	public Student findById(int id) throws SQLException {
+		Connection conn=DBUtil2.getConn();
+		String sql="select * from Student "
+				+ "where id=?";
+		PreparedStatement ps=conn.prepareStatement(sql);
+		ps.setInt(1, id);
+		ResultSet rs=ps.executeQuery();
+		Student s=null;
+		while(rs.next()) {
+			s=new Student();
+			s.setId(rs.getInt("id"));
+			s.setClassname(rs.getString("classname"));
+			s.setName(rs.getString("name"));
+			s.setXuehao(rs.getString("xuehao"));
+			s.setAge(rs.getInt("age"));
+			s.setScore(rs.getDouble("score"));
+		}
+		return s;
 	}
 	public static void main(String[] args) throws SQLException {
 	//Student student=new Student(3, "2班", "小王", "c2", 13, 65.1);
