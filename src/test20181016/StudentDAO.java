@@ -88,6 +88,12 @@ public class StudentDAO {
 		}
 		return stu;
 	}
+	/**
+	 * 
+	 * @param id 
+	 * @return 
+	 * @throws SQLException 
+	 */
 	public Student findById(int id) throws SQLException {
 		Connection conn=DBUtil2.getConn();
 		String sql="select * from Student "
@@ -106,19 +112,5 @@ public class StudentDAO {
 			s.setScore(rs.getDouble("score"));
 		}
 		return s;
-	}
-	public static void main(String[] args) throws SQLException {
-	//Student student=new Student(3, "2班", "小王", "c2", 13, 65.1);
-	//System.out.println(s);
-	StudentDAO studentdao=new StudentDAO();
-	//studentdao.add(student);
-	//studentdao.del("小明","2班");
-	//studentdao.upd(student);
-	List<Student> s=studentdao.findAll();
-	for(int i=0;i<s.size();i++) {
-		Student a=s.get(i);
-		System.out.println(a);
-	}
-	//s.forEach(System.out::println);
 	}
 }
