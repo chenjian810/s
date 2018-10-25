@@ -23,11 +23,7 @@ public class AServlet extends HttpServlet {
 		request.setAttribute("aaa", "³Â½¨");
 		//EmpDAO dao=new EmpDAO();
 		StudentDAO studao=new StudentDAO();
-		try {
-			request.setAttribute("stulist", studao.findAll());
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		request.setAttribute("stulist", studao.findAll());
 		request.getRequestDispatcher("2.jsp").forward(request, response);
 
 	}

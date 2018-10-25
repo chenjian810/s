@@ -70,22 +70,35 @@ public class StudentDAO {
 	 * @return 学生信息集合
 	 * @throws SQLException sql异常
 	 */
-	public List<Student> findAll() throws SQLException {
-		Connection conn=DBUtil2.getConn();
-		String sql="select * from Student";
-		PreparedStatement ps=conn.prepareStatement(sql);
-		ResultSet rs=ps.executeQuery();
-		List<Student> stu=new ArrayList<Student>();
-		while(rs.next()) {
-			Student s=new Student();
-			s.setId(rs.getInt("id"));
-			s.setClassname(rs.getString("classname"));
-			s.setName(rs.getString("name"));
-			s.setXuehao(rs.getString("xuehao"));
-			s.setAge(rs.getInt("age"));
-			s.setScore(rs.getDouble("score"));
-			stu.add(s);
+	public List<Student> findAll()  {
+		Connection conn=null;
+		List<Student> stu=null;
+		try {
+			conn=DBUtil2.getConn();
+			String sql="select * from Student";
+			PreparedStatement ps=conn.prepareStatement(sql);
+			ResultSet rs=ps.executeQuery();
+			stu=new ArrayList<Student>();
+			while(rs.next()) {
+				Student s=new Student();
+				s.setId(rs.getInt("id"));
+				s.setClassname(rs.getString("classname"));
+				s.setName(rs.getString("name"));
+				s.setXuehao(rs.getString("xuehao"));
+				s.setAge(rs.getInt("age"));
+				s.setScore(rs.getDouble("score"));
+				stu.add(s);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			try {
+				DBUtil2.closeConn(conn);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
+		
 		return stu;
 	}
 	/**

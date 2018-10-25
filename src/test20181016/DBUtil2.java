@@ -26,6 +26,7 @@ public class DBUtil2 {
 			bs.setPassword(prop.getProperty("password"));
 			bs.setUrl(prop.getProperty("url"));
 			bs.setMaxActive(Integer.parseInt(prop.getProperty("maxActive")));
+			bs.setMaxWait(Long.parseLong(prop.getProperty("maxwait")));
 			System.out.println("数据库已连接");
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -65,7 +65,7 @@ function add(){
 		<td>${s.xuehao }</td>
 		<td>${s.age}</td>
 		<td>${s.score }</td>
-			<td colspan="2"><button onclick="load(${s.id})">修改</button>&nbsp;<button onclick="del(${s.id})">删除</button></td>
+			<td><button onclick="load(${s.id})">修改</button>&nbsp;<button onclick="del(${s.id})">删除</button></td>
 			</tr>
 		</c:forEach>
 	</table>

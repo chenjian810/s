@@ -87,7 +87,26 @@ public class WorksDAO {
 		//dao.del("Ð¡ºì");
 		//dao.upd(w);
 		//System.out.println(dao.findByName("Ð¡ºì"));
+		//1.
+		List<Works> works=dao.findAll();
+		for(int i=0;i<works.size();i++) {
+			System.out.println(works.get(i));
+		}
+		for(int i=works.size()-1;i>=0;i--) {
+			System.out.println(works.get(i));
+		}
+		System.out.println("===================");
+		//2.
+		for(Works w:dao.findAll()) {
+			System.out.println(w);
+		}
+		System.out.println("===================");
+		//3.
+		dao.findAll().forEach(a->System.out.println(a));
+		System.out.println("===================");
+		//4.
 		dao.findAll().forEach(System.out::println);
+		System.out.println("===================");
 		
 		
 	}

@@ -14,7 +14,6 @@ import test20181016.StudentDAO;
 /**
  * Servlet implementation class UpdateStuServlet
  */
-@WebServlet("/updstu")
 public class UpdateStuServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

@@ -13,7 +13,6 @@ import test20181016.StudentDAO;
 /**
  * Servlet implementation class DeleteStuServlet
  */
-@WebServlet("/delstu")
 public class DeleteStuServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
