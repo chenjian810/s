@@ -31,6 +31,7 @@ public class StudentListServlet extends HttpServlet {
 				List<Student> stulist=dao.findAll();
 				//2.设置请求参数
 				request.setAttribute("stulist", stulist);
+				
 				//3.将请求获取到的数据转发到页面上
 				request.getRequestDispatcher("stulist.jsp").forward(request, response);
 			} catch (Exception e) {

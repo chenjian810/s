@@ -46,7 +46,7 @@ function add(){
 <body>
 	<%-- <%String s=(String)request.getAttribute("111"); %> --%>
 	<h1>${aaa}你好</h1>
-	<h2>学生列表&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="add()"> 添加</button></h2>
+	<h2>学生列表&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一共条记录<button onclick="add()"> 添加</button></h2>
 	<table cellspacing="0" cellpadding="0"> 
 		<tr>
 			<td>编号</td>
