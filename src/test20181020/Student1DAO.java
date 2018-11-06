@@ -90,11 +90,11 @@ public class Student1DAO {
 		return s;
 	}
 	public static void main(String[] args) throws SQLException {
-		Student1 stu=new Student1(2,"一班","小陈","C1",23,85);
+		//Student1 stu=new Student1(2,"一班","小陈","C1",23,85);
 		Student1DAO stu1dao=new Student1DAO();
 		//stu1dao.add(stu);
 		//stu1dao.findAll().forEach(System.out::println);
-		//System.out.println(stu1dao.findByName("小陈","22"));
+		System.out.println(stu1dao.findByName("小陈","C1"));
 		
 	}
 
